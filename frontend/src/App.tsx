@@ -3,7 +3,7 @@ import './App.css';
 
 // Import Layout and Page Components
 import Layout from './components/Layout';
-import HomePage from './pages/Homepage';
+import HomePage from './pages/HomePage';
 import HelpHubPage from './pages/HelpHubpagte'; // Adjust path if needed
 
 function App() {

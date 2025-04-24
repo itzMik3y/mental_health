@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ResourceSection from '../components/ResourceSection';
 import OnlineSupportSection from '../components/OnlineSupportSection';
 
