@@ -8,6 +8,7 @@ import HelpHubPage from './pages/HelpHubpagte';
 import StoriesPage from './pages/StoriesPage';
 import StoryDetailPage from './pages/StoryPage';
 import EducationPage from './pages/EducationPage';
+import ConfessionsPage from './pages/ConfessionsPage';
 function App() {
   return (
     <Routes>
@@ -18,6 +19,7 @@ function App() {
         <Route path="stories" element={<StoriesPage />} />
         <Route path="stories/:slug" element={<StoryDetailPage />} />
         <Route path="education" element={<EducationPage />} />
+        <Route path="confessions" element={<ConfessionsPage />} />
         
         {/* Add other page routes here as needed */}
         {/* <Route path="*" element={<NotFoundPage />} /> */}

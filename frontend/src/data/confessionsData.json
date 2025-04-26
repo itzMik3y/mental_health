@@ -1,0 +1,92 @@
+[
+    {
+      "id": "c1",
+      "text": "I've been putting on a brave face at work every day, but I've been secretly struggling with anxiety attacks in the bathroom stalls.",
+      "username": "Anonymous_Kingston",
+      "timestamp": "2025-04-23T14:35:00Z",
+      "likes": 28,
+      "comments": 7,
+      "isAnonymous": true
+    },
+    {
+      "id": "c2",
+      "text": "When people ask if I'm okay, I always say yes. I haven't been honest about my depression with anyone except my therapist.",
+      "username": "sunshine_girl",
+      "timestamp": "2025-04-22T09:18:00Z",
+      "likes": 43,
+      "comments": 12,
+      "isAnonymous": false
+    },
+    {
+      "id": "c3",
+      "text": "I thought I was the only man in Jamaica who cried himself to sleep. Reading the stories here made me feel less alone for the first time in years.",
+      "username": "Anonymous_MoBay",
+      "timestamp": "2025-04-21T19:45:00Z",
+      "likes": 52,
+      "comments": 15,
+      "isAnonymous": true
+    },
+    {
+      "id": "c4",
+      "text": "My family thinks I'm just being lazy, but some days my depression makes it impossible to even get out of bed. I wish they understood mental illness is real.",
+      "username": "Anonymous_Portmore",
+      "timestamp": "2025-04-20T11:27:00Z",
+      "likes": 37,
+      "comments": 21,
+      "isAnonymous": true
+    },
+    {
+      "id": "c5",
+      "text": "I've been in therapy for 6 months now. Today I laughed and realized it was the first time I'd genuinely felt happy in over a year. There is hope.",
+      "username": "healing_journey",
+      "timestamp": "2025-04-19T16:03:00Z",
+      "likes": 64,
+      "comments": 18,
+      "isAnonymous": false
+    },
+    {
+      "id": "c6",
+      "text": "I've been hiding my medication from my roommates because I'm afraid they'd judge me for having bipolar disorder.",
+      "username": "Anonymous_UWI",
+      "timestamp": "2025-04-18T13:50:00Z",
+      "likes": 19,
+      "comments": 8,
+      "isAnonymous": true
+    },
+    {
+      "id": "c7",
+      "text": "Today I told my pastor about my mental health struggles. Instead of judgment, he shared his own experience with depression. I feel so relieved.",
+      "username": "faith_seeker",
+      "timestamp": "2025-04-17T20:15:00Z",
+      "likes": 48,
+      "comments": 23,
+      "isAnonymous": false
+    },
+    {
+      "id": "c8",
+      "text": "I smiled through my cousin's wedding last weekend while having the worst anxiety episode of my life. No one noticed. We've become too good at hiding our pain.",
+      "username": "Anonymous_Ocho",
+      "timestamp": "2025-04-16T10:32:00Z",
+      "likes": 41,
+      "comments": 16,
+      "isAnonymous": true
+    },
+    {
+      "id": "c9",
+      "text": "Started medication for anxiety last month. The difference is like night and day. Wish I hadn't waited 3 years to get help.",
+      "username": "new_beginnings",
+      "timestamp": "2025-04-15T08:47:00Z",
+      "likes": 35,
+      "comments": 11,
+      "isAnonymous": false
+    },
+    {
+      "id": "c10",
+      "text": "I tell everyone I'm doing great at university, but I've been having panic attacks before every exam. I'm afraid of disappointing my family if I fail.",
+      "username": "Anonymous_Student",
+      "timestamp": "2025-04-14T15:25:00Z",
+      "likes": 26,
+      "comments": 9,
+      "isAnonymous": true
+    }
+  ]

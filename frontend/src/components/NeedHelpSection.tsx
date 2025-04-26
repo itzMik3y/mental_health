@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button'; // Import updated Button
+import { Link } from 'react-router-dom'; // Import Link for navigation
 
 // --- Include or import placeholder icons ---
 const PhoneIconSolid: React.FC<{ className?: string }> = ({ className }) => ( <svg className={className} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg> );
@@ -81,9 +82,11 @@ const NeedHelpSection: React.FC = () => {
                         </ul>
 
                          <div className="mt-auto"> {/* Pushes button to bottom */}
-                            <Button variant="primary" className="self-start"> {/* Align button left */}
-                                View Full Directory
-                            </Button>
+                            <Link to="/help-hub">
+                                <Button variant="primary" className="self-start">
+                                    View Full Directory
+                                </Button>
+                            </Link>
                         </div>
                     </div>
 
