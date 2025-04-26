@@ -96,7 +96,7 @@ const UnderstandingSection: React.FC = () => {
 
         {/* Explore All Button */}
         <div className="text-center">
-            <Button variant="secondary">
+            <Button variant="primary">
                 Explore All Articles
             </Button>
         </div>

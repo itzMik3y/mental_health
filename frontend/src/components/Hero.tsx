@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
                   <Button variant="primary">
                       Share Your Story
                   </Button>
-                  <Button variant="hero-outline">
+                  <Button variant="primary">
                       Find Help Now
                   </Button>
               </div>

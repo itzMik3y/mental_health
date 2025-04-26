@@ -1,6 +1,5 @@
 import ResourceCard from './ResourceCard';
 
-// Updated ResourceSection with blue underline
 const ResourceSection = ({ title, resources, gridCols = 'grid-cols-1 md:grid-cols-3' }) => {
   return (
     <section className="mb-10">

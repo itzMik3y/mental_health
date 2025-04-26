@@ -1,14 +1,20 @@
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'hero-outline' | 'danger' | 'directory' | 'primary-blue'; // Added primary-blue
+  variant?: 'primary' | 'secondary' | 'hero-outline' | 'danger' | 'directory' | 'primary-blue';
   size?: 'sm' | 'md';
   children: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({ variant = 'primary-blue', size = 'md', children, className, ...props }) => {
-  const baseStyle = "rounded-md font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 transition duration-150 ease-in-out text-center inline-block disabled:opacity-50";
-  const sizeStyle = size === 'sm' ? "px-4 py-1.5 text-sm" : "px-6 py-2 text-base"; // Adjusted sizes
+const Button: React.FC<ButtonProps> = ({ 
+  variant = 'primary-blue', 
+  size = 'md', 
+  children, 
+  className, 
+  ...props 
+}) => {
+  const baseStyle = "rounded-md font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 transition duration-150 ease-in-out text-center inline-block disabled:opacity-50 w-full";
+  const sizeStyle = size === 'sm' ? "px-4 py-1.5 text-sm" : "px-6 py-2 text-base";
 
   let variantStyle = '';
   switch (variant) {

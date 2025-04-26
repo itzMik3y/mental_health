@@ -1,5 +1,3 @@
-
-
 // Icons
 const OnlineIcon = () => (
   <svg className="w-5 h-5 text-indigo-700" fill="currentColor" viewBox="0 0 20 20">
@@ -25,43 +23,46 @@ const OnlineSupportSection = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Online Therapy Platforms Card */}
-        <div className="bg-white rounded-lg shadow-sm overflow-hidden p-4">
-          {/* Icon and Title Area */}
-          <div className="flex items-center mb-3">
-            <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
-              <OnlineIcon />
+        <div className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
+          {/* Content area with flex-grow to push button to bottom */}
+          <div className="p-6 flex-grow flex flex-col mt-8">
+            {/* Icon and Title Area */}
+            <div className="flex items-center mb-4">
+              <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                <OnlineIcon />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Online Therapy Platforms
+              </h3>
             </div>
-            <h3 className="text-base font-semibold text-gray-900">
-              Online Therapy Platforms
-            </h3>
+            
+            {/* Description - Center aligned but better spacing */}
+            <p className="text-sm text-gray-600 mb-4 text-center mx-auto max-w-md">
+              Connect with licensed therapists via video, phone, or text messaging. Many offer reduced rates for Jamaican residents.
+            </p>
+            
+            {/* List of options with proper alignment */}
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-baseline">
+                <span className="text-blue-500 mr-2 text-lg">•</span>
+                <span className="text-sm text-gray-700">BetterHelp - International platform with sliding scale options</span>
+              </li>
+              <li className="flex items-baseline">
+                <span className="text-blue-500 mr-2 text-lg">•</span>
+                <span className="text-sm text-gray-700">TherapyRoute - Find therapists offering online sessions</span>
+              </li>
+              <li className="flex items-baseline">
+                <span className="text-blue-500 mr-2 text-lg">•</span>
+                <span className="text-sm text-gray-700">Caribbean Teletherapy - Regional therapists familiar with cultural context</span>
+              </li>
+            </ul>
           </div>
           
-          {/* Description - Text-center */}
-          <p className="text-sm text-gray-600 mb-3 text-center">
-            Connect with licensed therapists via video, phone, or text messaging. Many offer reduced rates for Jamaican residents.
-          </p>
-          
-          {/* List of options with blue dots */}
-          <ul className="mb-5 space-y-1 pl-2">
-            <li className="flex items-start">
-              <span className="text-blue-500 mr-2 mt-1">•</span>
-              <span className="text-sm">BetterHelp - International platform with sliding scale options</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-blue-500 mr-2 mt-1">•</span>
-              <span className="text-sm">TherapyRoute - Find therapists offering online sessions</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-blue-500 mr-2 mt-1">•</span>
-              <span className="text-sm">Caribbean Teletherapy - Regional therapists familiar with cultural context</span>
-            </li>
-          </ul>
-          
-          {/* Button - Centered */}
-          <div className="text-center mt-auto">
+          {/* Button container - Fixed at bottom */}
+          <div className="px-6 pb-6 mt-auto">
             <a 
               href="#" 
-              className="inline-block text-blue-600 py-2 px-4 text-sm font-medium"
+              className="block w-full text-center bg-blue-50 hover:bg-blue-100 text-blue-600 py-3 px-4 text-sm font-medium rounded-md transition duration-150"
             >
               Explore Options
             </a>
@@ -69,57 +70,58 @@ const OnlineSupportSection = () => {
         </div>
         
         {/* Virtual Support Groups Card */}
-        <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+        <div className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
           {/* Free Service Tag - Full width */}
-          <div className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 text-center">
+          <div className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1.5 text-center">
             Free Service
           </div>
           
-          <div className="p-4">
+          {/* Content area with flex-grow to push button to bottom */}
+          <div className="p-6 flex-grow flex flex-col">
             {/* Icon and Title Area */}
-            <div className="flex items-center mb-3">
+            <div className="flex items-center mb-4">
               <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
                 <GroupIcon />
               </div>
-              <h3 className="text-base font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-gray-900">
                 Virtual Support Groups
               </h3>
             </div>
             
-            {/* Description - Text-center */}
-            <p className="text-sm text-gray-600 mb-3 text-center">
+            {/* Description - Center aligned but better spacing */}
+            <p className="text-sm text-gray-600 mb-4 text-center mx-auto max-w-md">
               Free online communities and support groups focused on specific mental health concerns.
             </p>
             
-            {/* List of options with blue dots */}
-            <ul className="mb-5 space-y-1 pl-2">
-              <li className="flex items-start">
-                <span className="text-blue-500 mr-2 mt-1">•</span>
-                <span className="text-sm">Depression & Anxiety Support Circle - Weekly Zoom meetings</span>
+            {/* List of options with proper alignment */}
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-baseline">
+                <span className="text-blue-500 mr-2 text-lg">•</span>
+                <span className="text-sm text-gray-700">Depression & Anxiety Support Circle - Weekly Zoom meetings</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-blue-500 mr-2 mt-1">•</span>
-                <span className="text-sm">Grief Recovery Network - Peer support for those experiencing loss</span>
+              <li className="flex items-baseline">
+                <span className="text-blue-500 mr-2 text-lg">•</span>
+                <span className="text-sm text-gray-700">Grief Recovery Network - Peer support for those experiencing loss</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-blue-500 mr-2 mt-1">•</span>
-                <span className="text-sm">ADHD Jamaica - Resources and community support</span>
+              <li className="flex items-baseline">
+                <span className="text-blue-500 mr-2 text-lg">•</span>
+                <span className="text-sm text-gray-700">ADHD Jamaica - Resources and community support</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-blue-500 mr-2 mt-1">•</span>
-                <span className="text-sm">Substance Recovery Jamaica - 12-step programs online</span>
+              <li className="flex items-baseline">
+                <span className="text-blue-500 mr-2 text-lg">•</span>
+                <span className="text-sm text-gray-700">Substance Recovery Jamaica - 12-step programs online</span>
               </li>
             </ul>
-            
-            {/* Button - Full width blue */}
-            <div className="mt-auto">
-              <a 
-                href="#" 
-                className="block text-center bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 text-sm font-medium"
-              >
-                Join a Group
-              </a>
-            </div>
+          </div>
+          
+          {/* Button container - Fixed at bottom with same padding as other card */}
+          <div className="px-6 pb-6 mt-auto">
+            <a 
+              href="#" 
+              className="block w-full text-center bg-blue-50 hover:bg-blue-700 text-white py-3 px-4 text-sm font-medium rounded-md transition duration-150"
+            >
+              Join a Group
+            </a>
           </div>
         </div>
       </div>

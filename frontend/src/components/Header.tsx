@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 // Placeholder Logo Icon (Replace with your actual SVG or Image)
 const LogoIcon: React.FC = () => (
@@ -8,19 +9,36 @@ const LogoIcon: React.FC = () => (
   </svg>
 );
 
-
 const Header: React.FC = () => {
-  // Assume 'home' is the active page for styling example
-  const activePage = 'home';
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  
+  // Determine active page based on current URL path
+  const getActivePage = () => {
+    const path = location.pathname;
+    if (path === '/') return 'home';
+    return path.split('/')[1]; // Gets the first segment of the path
+  };
+
+  const activePage = getActivePage();
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
 
   const navItems = [
-    { id: 'home', label: 'Home', href: '#' },
-    { id: 'stories', label: 'Stories', href: '#stories' },
-    { id: 'education', label: 'Education', href: '#health' }, // Assuming maps to #health section
-    { id: 'help', label: 'Help Hub', href: '#help' },
-    { id: 'voices', label: 'Voices', href: '#' }, // Add section ID if available
-    { id: 'interactive', label: 'Interactive', href: '#' }, // Add section ID if available
+    { id: 'home', label: 'Home', path: '/' },
+    { id: 'stories', label: 'Stories', path: '/stories' },
+    { id: 'education', label: 'Education', path: '/education' },
+    { id: 'help-hub', label: 'Help Hub', path: '/help-hub' },
+    { id: 'voices', label: 'Voices', path: '/voices' },
+    { id: 'interactive', label: 'Interactive', path: '/interactive' },
   ];
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     // Header with full-width background and subtle shadow/border
@@ -28,32 +46,72 @@ const Header: React.FC = () => {
       {/* Inner container for constrained content */}
       <nav className="container mx-auto px-4 lg:px-6 py-3 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="flex items-center text-lg font-bold text-gray-800 hover:text-brand-green">
-           <LogoIcon />
-           No Shame Inna Mi Mind
-        </a>
+        <Link to="/" className="flex items-center text-lg font-bold text-gray-800 hover:text-blue-600 transition">
+          <LogoIcon />
+          No Shame Inna Mi Mind
+        </Link>
 
-        {/* Navigation Links */}
+        {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-6 lg:space-x-8 items-center">
           {navItems.map(item => (
-            <a
+            <Link
               key={item.id}
-              href={item.href}
+              to={item.path}
               className={`text-sm lg:text-base transition duration-150 ease-in-out
-                 ${activePage === item.id
-                   ? 'text-brand-green font-semibold' // Active link style
-                   : 'text-gray-600 hover:text-brand-green' // Inactive link style
-                 }`}
+                ${activePage === item.id
+                  ? 'text-blue-600 font-semibold border-b-2 border-blue-600 pb-1' // Active link style
+                  : 'text-gray-600 hover:text-blue-600' // Inactive link style
+                }`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
-         {/* Add Mobile Menu Button Here if needed */}
-         <div className="md:hidden">
-            {/* Hamburger Icon Button */}
-         </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            type="button"
+            className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+            aria-label="Toggle menu"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </nav>
+
+      {/* Mobile Menu (Slide Down) */}
+      <div 
+        className={`md:hidden bg-white overflow-hidden transition-all duration-300 ease-in-out border-b border-gray-200 ${
+          isMenuOpen ? 'max-h-96' : 'max-h-0'
+        }`}
+      >
+        <div className="px-4 pt-2 pb-4 space-y-3">
+          {navItems.map(item => (
+            <Link
+              key={item.id}
+              to={item.path}
+              className={`block py-2 px-3 rounded-md text-base font-medium transition duration-150 ease-in-out ${
+                activePage === item.id
+                  ? 'text-blue-600 bg-blue-50' // Active mobile link style
+                  : 'text-gray-600 hover:bg-gray-50 hover:text-blue-600' // Inactive mobile link style
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
     </header>
   );
 };

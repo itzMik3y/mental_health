@@ -53,7 +53,7 @@ const NeedHelpSection: React.FC = () => {
                         </ul>
 
                         <div className="mt-auto"> {/* Pushes button to bottom */}
-                            <Button variant="danger">
+                            <Button variant="primary">
                                 Call Now
                             </Button>
                             {/* Note: The 'Call Now' button might need JS to dial the primary number, or link to 'tel:' */}
@@ -81,7 +81,7 @@ const NeedHelpSection: React.FC = () => {
                         </ul>
 
                          <div className="mt-auto"> {/* Pushes button to bottom */}
-                            <Button variant="directory" className="self-start"> {/* Align button left */}
+                            <Button variant="primary" className="self-start"> {/* Align button left */}
                                 View Full Directory
                             </Button>
                         </div>
