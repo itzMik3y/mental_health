@@ -29,7 +29,7 @@ export const storyData: Story[] = [
     categoryColor: 'bg-purple-100 text-purple-800',
     title: 'Finding My Way Through Depression',
     snippet: '"Mi never think depression was real until it hit me like a hurricane. After mi lose mi job, everything just start spiral."',
-    fullContent: `Mi name Sharna, and mi grow up inna Kingston. From mi small, everybody always call mi "the happy one" – always laughing, always dancing. Nobody never woulda guess what gwaan inside mi head. When mi lose mi job during the pandemic, everything crash. Mi couldn’t sleep, mi couldn’t eat, mi just sit down and stare at di wall whole day. Mi friends and family start to notice but dem never understand. One day, mi just decide seh mi can’t live like dis anymore. Mi walk into a clinic, and mi start therapy. It rough, mi nah lie, but little by little mi find back mi smile. Now mi tell mi story fi help others know depression real and help out deh.`,
+    fullContent: `Mi name Sharna, and mi grow up inna Kingston. From mi small, everybody always call mi "the happy one" always laughing, always dancing. Nobody never woulda guess what gwaan inside mi head. When mi lose mi job during the pandemic, everything crash. Mi couldn’t sleep, mi couldn’t eat, mi just sit down and stare at di wall whole day. Mi friends and family start to notice but dem never understand. One day, mi just decide seh mi can’t live like dis anymore. Mi walk into a clinic, and mi start therapy. It rough, mi nah lie, but little by little mi find back mi smile. Now mi tell mi story fi help others know depression real and help out deh.`,
     avatarSrc: 'https://www.alamy.com/pretty-jamaican-woman-18-to-20-watches-out-window-from-behind-curtain-image5520916.html?utm_source=chatgpt.com',
     authorName: 'Sharna M.',
     authorAge: 28,
@@ -63,87 +63,45 @@ export const storyData: Story[] = [
     categoryColor: 'bg-green-100 text-green-800',
     title: 'From Darkness to Purpose',
     snippet: '"After mi brother suicide, mi decide fi talk bout mental health. Now mi help others find di help dem need."',
-    fullContent: `In this powerful video, Marcus shares his journey after losing his younger brother to suicide five years ago. Di pain nearly destroy him, but him use dat pain fi fuel a mission to spread awareness bout mental health. Marcus start a community outreach program weh visit schools and churches fi talk bout suicide prevention. Him story reach many, and him inspire youth fi seek help and never give up.`,
+    fullContent: `Listening Beyond Words: Preventing Suicide with Care and Awareness
+
+Asking for help can be hard, especially for those silently struggling. This is why it’s important that we learn to listen, not just to words, but to actions, moods, and changes in behavior. Suicide is preventable, but only if we recognize the signs and respond with care.
+
+People often joke about wanting to die, but whether serious or not, such statements must be taken seriously. Understanding warning signs can make the difference between life and death. Counselors recommend using the PIN method to assess risk:
+
+Plan: Has the person made a clear plan? Knowing when, where, or how makes it more serious.
+
+Intensity: How extreme is their method? More drastic methods (like hanging or using a gun, common in Jamaica) suggest higher risk.
+
+Nearness: How close are they to acting? Have they gathered the means? Are they behaving differently?
+
+Watch for signs: poor self-care, loss of energy, and unusual calm after deep sadness. A sudden burst of happiness without any clear reason could mean they’ve decided to act. Listen for things like, “I can’t take it anymore” or “I feel like ending it.” These are not to be ignored.
+
+Using your senses—seeing changes, hearing cries for help, even noticing neglect—is key. Smell body odor? It might mean they’ve stopped caring for themselves.
+
+Support is crucial. Many who consider suicide feel alone or believe no one cares. Show them they matte talk to them, listen, and offer help. Sometimes, professional support is needed, including medication and therapy.
+
+In Jamaica, help is available:
+
+Suicide Helpline: 888-639-5433
+
+Choose Life International: 920-7924
+
+Don’t hesitate to reach out for help on their behalf.
+
+Above all, be kind. You don’t know what someone is going through. Avoid harsh words. Be gentle, be positive, and speak life into others. A kind word or a caring gesture might be what saves someone from despair. Let’s all do our part listen, care, and act.`,
     avatarSrc: 'https://www.alamy.com/stock-photo/jamaican-man-talking.html?utm_source=chatgpt.com',
     authorName: 'Marcus T.',
     authorAge: 35,
     featured: true,
     publishDate: '2023-08-21'
   },
-  {
-    id: 4,
-    slug: 'school-pressure-and-mental-health',
-    type: 'video',
-    imgSrc: 'https://www.istockphoto.com/photos/stressed-student-in-exam?utm_source=chatgpt.com',
-    videoUrl: 'https://www.youtube.com/watch?v=example2',
-    videoPlaceholderBg: 'bg-blue-200',
-    category: 'Youth Mental Health',
-    categoryColor: 'bg-yellow-100 text-yellow-800',
-    title: 'School Pressure and Mental Health',
-    snippet: '"The pressure to perform well in school nearly broke me. Nobody understood how the stress was affecting mi mental health."',
-    fullContent: `Tasha, a bright 19-year-old, shares her intense experience with academic pressure. Growing up, everybody expect her fi get straight A's and pass all CXC. But behind the good grades was sleepless nights, tears, and panic attacks. When Tasha finally talk to a counselor, she realise seh grades nuh define her worth. Now she advocate fi more support fi students in schools.`,
-    avatarSrc: 'https://www.istockphoto.com/photos/stressed-student-in-exam?utm_source=chatgpt.com',
-    authorName: 'Tasha K.',
-    authorAge: 19,
-    featured: false,
-    publishDate: '2023-11-12'
-  },
-  {
-    id: 5,
-    slug: 'living-with-schizophrenia-in-rural-jamaica',
-    type: 'audio',
-    imgSrc: 'https://www.shutterstock.com/search/rural-jamaica?utm_source=chatgpt.com',
-    audioUrl: '/audio/winston-story.mp3',
-    category: 'Schizophrenia',
-    categoryColor: 'bg-red-100 text-red-800',
-    title: 'Living with Schizophrenia in Rural Jamaica',
-    snippet: '"In mi community, dem call mi \'mad man\' for years. Nobody understand what schizophrenia is, and the nearest doctor was..."',
-    fullContent: `In this audio testimonial, Winston bravely shares his lifelong experience with schizophrenia while living in a rural parish. Di stigma hard, di isolation worse. But with help from a visiting doctor and him family support, Winston manage fi control him condition and now help others in him village understand mental illness better.`,
-    avatarSrc: 'https://www.shutterstock.com/search/rural-jamaica?utm_source=chatgpt.com',
-    authorName: 'Winston J.',
-    authorAge: 57,
-    featured: false,
-    publishDate: '2023-07-30'
-  },
-  {
-    id: 6,
-    slug: 'from-patient-to-provider',
-    type: 'written',
-    imgSrc: 'https://www.shutterstock.com/search/caribbean-doctor?utm_source=chatgpt.com',
-    category: 'Healthcare Workers',
-    categoryColor: 'bg-indigo-100 text-indigo-800',
-    title: 'From Patient to Provider',
-    snippet: '"After mi own battle with depression, mi decide to become a mental health nurse. Now mi help others who struggle like mi did..."',
-    fullContent: `Dr. Lisa M. shares her personal journey from experiencing severe postpartum depression to becoming a licensed mental health professional. Her story shows how pain can transform into purpose, and how the right support can change lives.`,
-    avatarSrc: 'https://www.shutterstock.com/search/caribbean-doctor?utm_source=chatgpt.com',
-    authorName: 'Dr. Lisa M.',
-    authorAge: 41,
-    featured: false,
-    publishDate: '2023-09-03'
-  },
-  {
-    id: 7,
-    slug: 'art-as-my-therapy',
-    type: 'video',
-    imgSrc: 'https://www.shutterstock.com/search/jamaican-culture?utm_source=chatgpt.com',
-    videoUrl: 'https://www.youtube.com/watch?v=example3',
-    videoPlaceholderBg: 'bg-pink-200',
-    category: 'Creative Therapy',
-    categoryColor: 'bg-pink-100 text-pink-800',
-    title: 'Art as My Therapy',
-    snippet: '"When mi couldn\'t afford therapy, mi turn to art. Every painting was a piece of mi trauma leaving mi body..."',
-    fullContent: `This visually engaging video features Kendra, a young Jamaican artist, who turned to painting as a way to process complex emotions. She now hosts art therapy workshops for youth.`,
-    avatarSrc: 'https://www.shutterstock.com/search/jamaican-culture?utm_source=chatgpt.com',
-    authorName: 'Kendra B.',
-    authorAge: 25,
-    featured: false,
-    publishDate: '2023-10-18'
-  },
+
   {
     id: 8,
     slug: 'after-baby-blues-hit-hard',
     type: 'written',
-    imgSrc: 'https://www.shutterstock.com/search/black-woman-looking-out-window?utm_source=chatgpt.com',
+    imgSrc: 'https://forwardtogether.org/wp-content/uploads/2016/01/mother-with-twins.jpg',
     category: 'Postpartum Depression',
     categoryColor: 'bg-rose-100 text-rose-800',
     title: 'After Di Baby Blues Hit Hard',
@@ -159,37 +117,20 @@ export const storyData: Story[] = [
     id: 9,
     slug: 'man-fi-be-strong-burnout',
     type: 'video',
-    imgSrc: 'https://www.shutterstock.com/search/nervous-black-man?utm_source=chatgpt.com',
-    videoUrl: 'https://www.youtube.com/watch?v=example4',
+    imgSrc: 'https://loopnewslive.blob.core.windows.net/liveimage/sites/default/files/2023-11/men_health_b674766e2b6062e6e79cb55a2b8d0901.jpg',
+    videoUrl: 'https://youtu.be/kSmfGwelDPc?si=C9SQorbOVHJulMtf',
     videoPlaceholderBg: 'bg-cyan-200',
     category: "Men's Mental Health",
     categoryColor: 'bg-cyan-100 text-cyan-800',
     title: '"Man Fi Be Strong": Burnout an Seeking Help',
-    snippet: '"As a man in Jamaica, yuh cyaan show weakness. Mi work two job, stress pile up, but mi keep it lock inside till mi nearly collapse..."',
-    fullContent: `In this candid video interview, Roy, a 45-year-old taxi driver and part-time construction worker, talks about the immense pressure Jamaican men face to appear strong. He shares how seeking help changed his life.`,
+    snippet: '"AIn this candid video the hosts talks about the immense pressure Jamaican men face to appear strong. He shares how seeking help changed his life..."',
+    fullContent: `In this candid video the hosts talks about the immense pressure Jamaican men face to appear strong. He shares how seeking help changed his life.`,
     avatarSrc: 'https://www.shutterstock.com/search/nervous-black-man?utm_source=chatgpt.com',
     authorName: 'Roy G.',
     authorAge: 45,
     featured: false,
     publishDate: '2024-02-15'
   },
-  {
-    id: 10,
-    slug: 'healing-after-violence',
-    type: 'audio',
-    imgSrc: 'https://unsplash.com/s/photos/hand-reaching-out?utm_source=chatgpt.com',
-    audioUrl: '/audio/chantelle-story.mp3',
-    category: 'Trauma & PTSD',
-    categoryColor: 'bg-orange-100 text-orange-800',
-    title: 'Picking Up Di Pieces: Healing After Violence',
-    snippet: '"Witnessing the shooting shake mi world. Mi couldn\'t sleep, jump at every loud noise. Talking bout it save mi life..."',
-    fullContent: `Chantelle shares her harrowing experience of witnessing a violent incident in her community and how therapy helped her reclaim her life.`,
-    avatarSrc: 'https://unsplash.com/s/photos/hand-reaching-out?utm_source=chatgpt.com',
-    authorName: 'Chantelle P.',
-    authorAge: 31,
-    featured: false,
-    publishDate: '2024-03-10'
-  }
 ];
 
 // --- Existing Helper Functions ---

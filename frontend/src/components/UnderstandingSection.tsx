@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button'; // Import the updated Button component
+
 
 // --- Include or Import the Placeholder Icons ---
 const CloudRainIcon: React.FC<{ className?: string }> = ({ className }) => ( <svg className={className} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M15.75 8a5.76 5.76 0 00-11.46 1.227 6.75 6.75 0 00.12 13.273h11.22a6.75 6.75 0 00.12-13.273A5.76 5.76 0 0015.75 8zM8.91 14.3a.75.75 0 011.06 0l1.5 1.5a.75.75 0 01-1.06 1.06l-1.5-1.5a.75.75 0 010-1.06zm3.6-2.24a.75.75 0 00-1.06 0l-1.5 1.5a.75.75 0 001.06 1.06l1.5-1.5a.75.75 0 000-1.06z" clipRule="evenodd"></path></svg> );
@@ -24,7 +24,7 @@ const UnderstandingSection: React.FC = () => {
       iconColor: 'text-emerald-700',
       title: "Depression: More Dan Just Feeling Sad",
       description: "Learn about the signs of depression, how it affects daily life, and why it's not just \"feeling sad\" or something you can \"shake off.\"",
-      link: "#depression-info"
+      link: "https://www.psychiatry.org/patients-families/depression/what-is-depression"
     },
     {
       icon: LightningIcon,
@@ -32,7 +32,7 @@ const UnderstandingSection: React.FC = () => {
       iconColor: 'text-yellow-700',
       title: "Anxiety: When Worry Tek Control",
       description: "Understand the difference between everyday stress and anxiety disorders, and learn coping strategies that work in a Jamaican context.",
-      link: "#anxiety-info"
+      link: "https://medlineplus.gov/anxiety.html"
     },
     {
       icon: BrainIcon,
@@ -40,7 +40,7 @@ const UnderstandingSection: React.FC = () => {
       iconColor: 'text-blue-700',
       title: "Schizophrenia: Beyond Di Myths",
       description: "Separate fact from fiction about schizophrenia and learn how proper treatment can help people live full, productive lives.",
-      link: "#schizophrenia-info"
+      link: "https://www.psychiatry.org/patients-families/schizophrenia/what-is-schizophrenia"
     },
   ];
 
@@ -95,11 +95,11 @@ const UnderstandingSection: React.FC = () => {
         </div>
 
         {/* Explore All Button */}
-        <div className="text-center">
+        {/* <div className="text-center">
             <Button variant="primary">
                 Explore All Articles
             </Button>
-        </div>
+        </div> */}
 
       </div>
     </section>

@@ -5,8 +5,7 @@ interface Video {
   id: string;
   title: string;
   description: string;
-  thumbnailUrl: string;
-  youtubeId: string;
+  youtubeUrl: string; // Store full URL instead of just ID
   category: string;
   duration: string;
 }
@@ -16,6 +15,31 @@ const EducationPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('all');
   // State for search/filter activation
   const [searchActive, setSearchActive] = useState<boolean>(false);
+
+  // Utility function to extract YouTube video ID from various URL formats
+  const extractYoutubeId = (url: string): string => {
+    if (!url) return '';
+    
+    // Handle different YouTube URL formats
+    let regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|live\/)([^#&?]*).*/;
+    let match = url.match(regExp);
+    
+    if (match && match[2] && match[2].length === 11) {
+      return match[2];
+    } else {
+      // Handle URLs like /live/_OPnJvmLikk
+      regExp = /^.*(?:youtu\.be\/|live\/)([^#&?]*).*/;
+      match = url.match(regExp);
+      return match && match[1] ? match[1] : '';
+    }
+  };
+  
+  // Generate thumbnail URL from video ID
+  const generateThumbnailUrl = (url: string): string => {
+    const id = extractYoutubeId(url);
+    if (!id) return '';
+    return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+  };
 
   // Categories
   const categories = [
@@ -28,23 +52,21 @@ const EducationPage: React.FC = () => {
     { id: 'youth', name: 'Youth Mental Health' }
   ];
 
-  // Video data
+  // Video data - now storing full YouTube URLs
   const videos: Video[] = [
     {
       id: 'v1',
       title: 'Understanding Depression in Caribbean Communities',
       description: 'Learn about how depression manifests in Caribbean communities and what cultural factors influence mental health perceptions.',
-      thumbnailUrl: 'https://img.youtube.com/vi/FKA2D3oH0bo/maxresdefault.jpg', // Replace with actual thumbnail
-      youtubeId: 'FKA2D3oH0bo',
+      youtubeUrl: 'https://www.youtube.com/live/_OPnJvmLikk?si=eNr6VQhRkMY-X5Lc',
       category: 'depression',
-      duration: '12:34'
+      duration: '36:03'
     },
     {
       id: 'v2',
       title: 'Anxiety Management Techniques',
       description: 'Practical techniques to help manage anxiety in daily life, presented by Jamaican mental health professionals.',
-      thumbnailUrl: 'https://img.youtube.com/vi/WWloIAQpMcQ/maxresdefault.jpg', // Replace with actual thumbnail
-      youtubeId: 'WWloIAQpMcQ',
+      youtubeUrl: 'https://www.youtube.com/watch?v=WWloIAQpMcQ',
       category: 'anxiety',
       duration: '8:45'
     },
@@ -52,44 +74,31 @@ const EducationPage: React.FC = () => {
       id: 'v3',
       title: 'Breaking Mental Health Stigma in Jamaica',
       description: 'A discussion about mental health stigma in Jamaica and how communities can work together to overcome it.',
-      thumbnailUrl: 'https://img.youtube.com/vi/eBmBWw_LlTo/maxresdefault.jpg', // Replace with actual thumbnail
-      youtubeId: 'eBmBWw_LlTo',
+      youtubeUrl: 'https://youtu.be/6bhTavtJ0MI?si=UsnjC77aH-LmTGeU',
       category: 'awareness',
-      duration: '15:20'
+      duration: '11:32'
     },
     {
       id: 'v4',
-      title: 'Mindfulness and Meditation Basics',
+      title: 'Mindfulness of Anxiety',
       description: 'Learn the fundamentals of mindfulness and meditation practices to improve your mental wellbeing.',
-      thumbnailUrl: 'https://img.youtube.com/vi/ZToicYcHIOU/maxresdefault.jpg', // Replace with actual thumbnail
-      youtubeId: 'ZToicYcHIOU',
-      category: 'coping',
-      duration: '10:15'
-    },
-    {
-      id: 'v5',
-      title: 'Trauma Recovery: A Caribbean Perspective',
-      description: 'Understanding trauma and PTSD through a Caribbean cultural lens, with recovery strategies and resources.',
-      thumbnailUrl: 'https://img.youtube.com/vi/q6NPmRWjeUw/maxresdefault.jpg', // Replace with actual thumbnail
-      youtubeId: 'q6NPmRWjeUw',
-      category: 'trauma',
-      duration: '18:30'
+      youtubeUrl: 'https://youtu.be/GjkwrVi_Lj0?si=0GsTALUhNhds5F9Z',
+      category: 'awareness',
+      duration: '17:56'
     },
     {
       id: 'v6',
       title: 'Supporting Youth Mental Health',
       description: 'How to recognize signs of mental health issues in young people and provide effective support.',
-      thumbnailUrl: 'https://img.youtube.com/vi/Uk2pELptaDU/maxresdefault.jpg', // Replace with actual thumbnail
-      youtubeId: 'Uk2pELptaDU',
+      youtubeUrl: 'https://youtu.be/_tI8XAwYfjA?si=GgTHd2QQRiY0Tobv',
       category: 'youth',
-      duration: '14:25'
+      duration: '4:15'
     },
     {
       id: 'v7',
       title: 'Healthy Coping vs Harmful Coping',
       description: 'Understanding the difference between healthy and harmful coping mechanisms for stress and emotional challenges.',
-      thumbnailUrl: 'https://img.youtube.com/vi/9B-wTp2PZH8/maxresdefault.jpg', // Replace with actual thumbnail
-      youtubeId: '9B-wTp2PZH8',
+      youtubeUrl: 'https://youtu.be/cPoqxmaEhL4?si=cdAGAS6ASaPLmlzc',
       category: 'coping',
       duration: '11:50'
     },
@@ -97,19 +106,25 @@ const EducationPage: React.FC = () => {
       id: 'v8',
       title: 'Mental Health First Aid Basics',
       description: 'Learn the basics of mental health first aid and how to support someone experiencing a mental health crisis.',
-      thumbnailUrl: 'https://img.youtube.com/vi/uuJ0OhPRxJw/maxresdefault.jpg', // Replace with actual thumbnail
-      youtubeId: 'uuJ0OhPRxJw',
+      youtubeUrl: 'https://youtu.be/MqDC5wPt6PM?si=GM8JcSEfqBATyg-P',
       category: 'awareness',
-      duration: '16:40'
+      duration: '1:25'
     },
     {
       id: 'v9',
       title: 'Depression in Men: Breaking the Silence',
       description: 'Addressing the unique challenges men face in recognizing and seeking help for depression, with a focus on Caribbean culture.',
-      thumbnailUrl: 'https://img.youtube.com/vi/V1RPi2MYptM/maxresdefault.jpg', // Replace with actual thumbnail
-      youtubeId: 'V1RPi2MYptM',
+      youtubeUrl: 'https://youtu.be/t54rqKbAxPE?si=Wa4_kCfQRGomu_3x',
       category: 'depression',
-      duration: '13:15'
+      duration: '10:35'
+    },
+    {
+      id: 'v10',
+      title: 'Live Mental Health Discussion',
+      description: 'A live discussion about mental health resources and support systems.',
+      youtubeUrl: 'https://www.youtube.com/live/_OPnJvmLikk?si=eNr6VQhRkMY-X5Lc',
+      category: 'awareness',
+      duration: '45:20'
     }
   ];
 
@@ -188,7 +203,7 @@ const EducationPage: React.FC = () => {
                 className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   activeCategory === category.id
                     ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-white hover:bg-gray-200'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 {category.name}
@@ -216,15 +231,22 @@ const EducationPage: React.FC = () => {
                   key={video.id} 
                   className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition-shadow"
                 >
-                  {/* Video Thumbnail */}
+                  {/* Video Thumbnail - using generateThumbnailUrl function */}
                   <div 
                     className="relative cursor-pointer" 
                     onClick={() => setSelectedVideo(video)}
                   >
                     <img 
-                      src={video.thumbnailUrl} 
+                      src={generateThumbnailUrl(video.youtubeUrl)} 
                       alt={video.title} 
                       className="w-full h-40 sm:h-36 md:h-48 object-cover"
+                      onError={(e) => {
+                        // If maxresdefault fails, try hqdefault
+                        const target = e.target as HTMLImageElement;
+                        if (target.src.includes('maxresdefault')) {
+                          target.src = target.src.replace('maxresdefault', 'hqdefault');
+                        }
+                      }}
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
                       <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-black bg-opacity-50 flex items-center justify-center">
@@ -273,11 +295,11 @@ const EducationPage: React.FC = () => {
               </svg>
             </button>
             
-            {/* Video player */}
+            {/* Video player - using extractYoutubeId function */}
             <div className="pt-[56.25%] relative">
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1`}
+                src={`https://www.youtube.com/embed/${extractYoutubeId(selectedVideo.youtubeUrl)}?autoplay=1`}
                 title={selectedVideo.title}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -324,7 +346,7 @@ const EducationPage: React.FC = () => {
       {/* Need Help Finding Section */}
       <section className="my-6 md:my-10 mx-4 md:mx-auto max-w-4xl p-4 md:p-6 bg-blue-800 rounded-lg text-center">
         <p className="text-white mb-3 md:mb-4 text-sm md:text-base">Need help finding the right resources? Our team can guide you.</p>
-        <button className="bg-white text-white hover:bg-blue-100 py-2 px-4 md:px-6 rounded-md font-medium text-sm md:text-base">
+        <button className="bg-white text-blue-800 hover:bg-blue-100 py-2 px-4 md:px-6 rounded-md font-medium text-sm md:text-base">
           Contact Support Team
         </button>
       </section>
